@@ -3,7 +3,7 @@ FROM pataquets/ubuntu:xenial
 RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive \
-    apt-get -y --no-install-recommends install collectd tzdata vim  net-tools \
+    apt-get -y --no-install-recommends install collectd tzdata vim  net-tools snmp snmp-mibs-downloader \
   && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
